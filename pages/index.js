@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import db from '../db.json'
+import Widget from '../src/components/Widget'
 
 const BackgroundImage = styled.div`
   background-image: url(${db.bg});
@@ -9,7 +10,7 @@ const BackgroundImage = styled.div`
 `
 
 export const QuizContainer = styled.div`
-  background-color: black;
+  background-color: ;
   width: 100%;
   max-width:350px;
   padding-top: 45px;
@@ -18,14 +19,29 @@ export const QuizContainer = styled.div`
     margin: auto;
     padding: 15px;
   }
-
 `
+
 
 export default function Home(){
   return(
     <BackgroundImage>
       <QuizContainer>
-      teste
+      <Widget>
+      <Widget.Header>
+        <h1>Teste</h1>
+        </Widget.Header>
+      <Widget.Content>
+         <p> TESTE subtitle</p>
+        </Widget.Content>
+      </Widget>
+      <Widget>
+      <Widget.Header>
+        <h1>Teste</h1>
+        </Widget.Header>
+      <Widget.Content>
+        <p> TESTE subtitle</p>
+      </Widget.Content>
+      </Widget>
       </QuizContainer>
     </BackgroundImage>
   );
